@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Celebration Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+ body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+.navbar {
+            background-color: #ff5722; /* Vibrant background */
+            border-bottom: 4px solid #ffc107;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .nav-link {
+            color: #ffffff !important;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffc107 !important; /* Highlight on hover */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        .hero-section img {
+            max-width: 150px;
+            margin: 20px 0;
+        }
+
+.container {
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    display: block;
+    margin: 20px auto;
+}
+
+ 
+.container {
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #555;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+ #rangoliCanvas {
+            width: 100%; /* Make the canvas responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 1px solid #ccc; /* Optional styling for canvas */
+        }
+        .container {
+            text-align: center; /* Center align the buttons */
+            padding: 20px; /* Add some padding */
+        }
+        button {
+            margin: 10px; /* Space out the buttons */
+        }
+
+        .hero-section img {
+            width: 150px;
+        }
+        .products-section h2 {
+            color: #d9534f;
+        }
+        .contact-form-section form {
+            border: 2px solid #ff9b3b;
+        }
+        footer {
+            background-color: #c94c36;
+        }
+         /* Diwali Card */
+         .diwali-card {
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+            margin: auto;
+            margin-top: 50px;
+        }
+        .card-content {
+            background-color: #fff3e0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 193, 7, 0.6);
+            animation: glow 2s infinite;
+        }
+        .title {
+            font-size: 36px;
+            color: #e91e63;
+        }
+        .hindi {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            color: #ff6f00;
+        }
+        .message {
+            font-size: 18px;
+            color: #424242;
+            margin: 10px 0;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            color: white;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+        button:hover {
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #673ab7;
+            font-weight: bold;
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 193, 7, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(255, 193, 7, 1); }
+            100% { box-shadow: 0 0 10px rgba(255, 193, 7, 0.4); }
+        }
+
+        .gift-form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .gift-suggestions {
+            margin-top: 20px;
+        }
+        .suggestion-card {
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .suggestion-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Diwali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="btn-success text-white btn btn-outline-primary ms-2" id="login-btn" href="login.html">Login</a></li>  
+                    <li class="nav-item"><a class=" ms-4 btn-success text-white btn btn-outline-primary ms-2" href="quiz.html">Play Quiz</a></li> 
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center py-5" style="background-color: #ff9b3b;">
+        <div class="container">
+            <h1 class="display-3 text-white">Happy Diwali</h1>
+            <img src="https://img.pikbest.com/origin/09/41/81/51qpIkbEsT5vK.png!sw800" alt="Diwali Lamp" class="img-fluid my-4">
+            <p class="lead text-white">Wishing you a joyous and prosperous Diwali!</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="offers" class="products-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Hurry Up!</h2>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="images.jpeg" class="card-img-top" alt="Product 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Candles</h5>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="51tEblLCUTL.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">String Lights</h5>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="istockphoto-1177240189-612x612.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Diwali Deepak</h5>
+                            <a href="#" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="countdown" class="text-center mt-5">
+        <h2>Countdown to Diwali</h2>
+        <div id="timer" class="display-4"></div>
+    </div>
+
+
+    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="card p-3 mb-4">
+                    <div class="d-flex justify-content-between">
+                        <button id="generateButton" class="btn btn-primary w-50">Generate Rangoli</button>
+                        <button id="saveButton" class="btn btn-success w-50">Save Rangoli</button>
+                    </div>
+                    
+                    <canvas id="rangoliCanvas" class="mb-2" style="border: 1px solid #ccc; width: 100%;"></canvas>
+                    <button id="nextButton" class="btn btn-info w-100">Next Rangoli</button>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <section id="diwaliWishes" class="mb-4">
+                    <div class="diwali-card">
+                        <div class="card-content text-center">
+                            <h1 class="title">Happy <span class="hindi">दीवाली</span></h1>
+                            <p class="message">आपको और आपके प्रियजनों को चमकदार और खुशहाल दीवाली की हार्दिक शुभकामनाएँ!</p>
+                            <form id="wishForm">
+                                <input type="text" id="userName" placeholder="अपना नाम दर्ज करें" required />
+                                <button type="submit" class="btn btn-primary">शुभकामना संदेश बनाएं</button>
+                            </form>
+                            <div class="result" id="resultMessage" style="display: none;"></div>
+                            <button id="shareBtn" class="btn btn-info" style="display: none;">📤 साझा करें</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="gift-form">
+        <h2 class="text-center mb-4">Find the Perfect Diwali Gift</h2>
+        <form id="giftForm">
+            <div class="mb-3">
+                <label for="recipientAge" class="form-label">Age of Recipient</label>
+                <input type="number" id="recipientAge" class="form-control" placeholder="Enter age" required>
+            </div>
+            <div class="mb-3">
+                <label for="recipientInterest" class="form-label">Interests of Recipient</label>
+                <select id="recipientInterest" class="form-select" required>
+                    <option value="">Select interest</option>
+                    <option value="technology">Technology</option>
+                    <option value="art">Art and Crafts</option>
+                    <option value="books">Books</option>
+                    <option value="fashion">Fashion and Accessories</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Suggest a Gift</button>
+        </form>
+        
+        <!-- Gift Suggestions Display -->
+        <div class="gift-suggestions mt-4" id="suggestionsContainer"></div>
+    </div>
+
+    
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get In Touch</h2>
+            <form class="shadow-sm p-4 bg-white rounded" id="contactForm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                         <label for="email" class="form-label">Email </label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="formMessage" class="mt-3"></div>
+        </div>
+    </section>
+
+    <footer class="text-white text-center py-3">
+        <div class="container">
+            <p>All rights reserved ©. <a href="https://himanshusingh-45.github.io/">Himanshu Singh</a> </p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+const diwaliDate = new Date("2025-11-14T00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = diwaliDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("timer").innerHTML = "Happy Diwali!";
+        }
+    }, 1000);
+
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formMessage').innerHTML = '<div class="alert alert-success">Thank you for reaching out! We will get back to you soon.</div>';
+         });
+
+ // Form handling for Diwali card
+ document.getElementById("wishForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("userName").value;
+            const resultMessage = `${name}, Wishing you a joyful Diwali filled with lights, laughter, and love! May this festival bring you peace, prosperity, and new beginnings. Happy Diwali! 🎉🪔`;
+            document.getElementById("resultMessage").innerText = resultMessage;
+            document.getElementById("resultMessage").style.display = "block";
+            document.getElementById("shareBtn").style.display = "inline-block";
+        });
+
+        // Share Button functionality
+        document.getElementById("shareBtn").addEventListener("click", () => {
+            const resultMessage = document.getElementById("resultMessage").textContent;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Happy Diwali Wishes',
+                    text: resultMessage,
+                }).catch((error) => console.error('Error sharing:', error));
+            } else {
+                alert('साझा करने का विकल्प इस डिवाइस पर उपलब्ध नहीं है।');
+            }
+        });
+
+
+// Functionality for Save Button
+document.getElementById('saveButton').addEventListener('click', function () {
+    const canvas = document.getElementById('rangoliCanvas');
+    
+    // Convert the canvas content to a data URL (image)
+    const imageData = canvas.toDataURL('image/png');
+
+    // Create a temporary anchor element for downloading
+    const downloadLink = document.createElement('a');
+    downloadLink.href = imageData;
+    downloadLink.download = 'rangoli.png';
+
+    // Trigger the download by simulating a click
+    downloadLink.click();
+});
+
+
+        const canvas = document.getElementById('rangoliCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = 500;
+canvas.height = 500;
+
+// Array of drawing functions for different Rangoli patterns
+const patterns = [
+    drawStarPattern,
+    drawMandalaPattern,
+    drawSymmetricLinesPattern,
+    drawCirclePattern,
+    drawFlowerPattern,
+];
+
+// Function to pick a random color
+function getRandomColor() {
+    return `hsl(${Math.random() * 360}, 100%, 50%)`;
+}
+
+// Pattern 1: Star-like pattern
+function drawStarPattern() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const points = 12; 
+    const radius = 150;
+
+    ctx.strokeStyle = getRandomColor();
+    ctx.lineWidth = 2;
+
+    for (let i = 0; i < points; i++) {
+        const angle1 = (i * 2 * Math.PI) / points;
+        const angle2 = ((i + 0.5) * 2 * Math.PI) / points;
+        const x1 = centerX + radius * Math.cos(angle1);
+        const y1 = centerY + radius * Math.sin(angle1);
+        const x2 = centerX + radius * Math.cos(angle2);
+        const y2 = centerY + radius * Math.sin(angle2);
+
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(x1, y1);
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+}
+
+// Pattern 2: Mandala-like pattern
+function drawMandalaPattern() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    for (let i = 0; i < 6; i++) {
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, (i + 1) * 30, 0, 2 * Math.PI);
+        ctx.strokeStyle = getRandomColor();
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    }
+}
+
+// Pattern 3: Symmetrical lines
+function drawSymmetricLinesPattern() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const numberOfLines = 20;
+    const radius = 200;
+
+    ctx.strokeStyle = getRandomColor();
+    ctx.lineWidth = 2;
+
+    for (let i = 0; i < numberOfLines; i++) {
+        const angle = (i * Math.PI) / (numberOfLines / 2);
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+}
+
+// Pattern 4: Circular pattern
+function drawCirclePattern() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    for (let i = 0; i < 8; i++) {
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, (i + 1) * 20, 0, Math.PI);
+        ctx.strokeStyle = getRandomColor();
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    }
+}
+
+// Pattern 5: Flower-like pattern
+function drawFlowerPattern() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const petals = 10;
+    const radius = 120;
+
+    ctx.strokeStyle = getRandomColor();
+    ctx.lineWidth = 2;
+
+    for (let i = 0; i < petals; i++) {
+        const angle = (i * 2 * Math.PI) / petals;
+        const x1 = centerX + radius * Math.cos(angle);
+        const y1 = centerY + radius * Math.sin(angle);
+
+        ctx.beginPath();
+        ctx.arc(x1, y1, 30, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+}
+
+// Counter for the pattern index
+let currentPatternIndex = 0;
+
+// Event listener for the "Next" button
+document.getElementById('nextButton').addEventListener('click', () => {
+    patterns[currentPatternIndex]();
+    currentPatternIndex = (currentPatternIndex + 1) % patterns.length;
+});
+
+// Initial drawing
+patterns[currentPatternIndex]();
+
+
+
+ // Predefined gift suggestions based on age and interests
+ const giftSuggestions = {
+            technology: [
+                { ageRange: [10, 20], gift: 'Smartwatch' },
+                { ageRange: [21, 40], gift: 'Wireless Earbuds' },
+                { ageRange: [41, 60], gift: 'E-Reader' }
+            ],
+            art: [
+                { ageRange: [10, 20], gift: 'Painting Kit' },
+                { ageRange: [21, 40], gift: 'Professional Sketch Set' },
+                { ageRange: [41, 60], gift: 'Art Workshop Voucher' }
+            ],
+            books: [
+                { ageRange: [10, 20], gift: 'Fantasy Book Series' },
+                { ageRange: [21, 40], gift: 'Self-Improvement Books' },
+                { ageRange: [41, 60], gift: 'Historical Novels' }
+            ],
+            fashion: [
+                { ageRange: [10, 20], gift: 'Trendy Backpack' },
+                { ageRange: [21, 40], gift: 'Designer Wallet' },
+                { ageRange: [41, 60], gift: 'Elegant Scarf' }
+            ],
+            sports: [
+                { ageRange: [10, 20], gift: 'Football or Basketball' },
+                { ageRange: [21, 40], gift: 'Fitness Tracker' },
+                { ageRange: [41, 60], gift: 'Golf Set' }
+            ]
+        };
+
+        document.getElementById('giftForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const age = parseInt(document.getElementById('recipientAge').value);
+            const interest = document.getElementById('recipientInterest').value;
+            const suggestionsContainer = document.getElementById('suggestionsContainer');
+            suggestionsContainer.innerHTML = ''; // Clear previous results
+
+            if (giftSuggestions[interest]) {
+                const suggestions = giftSuggestions[interest].filter(
+                    suggestion => age >= suggestion.ageRange[0] && age <= suggestion.ageRange[1]
+                );
+
+                if (suggestions.length > 0) {
+                    suggestions.forEach(suggestion => {
+                        const card = document.createElement('div');
+                        card.classList.add('suggestion-card');
+                        card.innerHTML = `<strong>Suggested Gift:</strong> ${suggestion.gift}`;
+                        suggestionsContainer.appendChild(card);
+                    });
+                } else {
+                    suggestionsContainer.innerHTML = '<p class="text-muted">No suitable gifts found for the given age and interest.</p>';
+                }
+            } else {
+                suggestionsContainer.innerHTML = '<p class="text-danger">Invalid interest selected.</p>';
+            }
+        });
+
+    </script>
+         
+ </body>
+</html>
